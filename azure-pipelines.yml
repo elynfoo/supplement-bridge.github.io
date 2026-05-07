@@ -38,6 +38,9 @@ stages:
       displayName: Install & Test Backend
 
     - script: |
+        echo Build dir contents:
+        dir frontend
+        dir frontend\build
         xcopy /E /I /Y frontend\build backend\public
       displayName: Copy Frontend into Backend
 
