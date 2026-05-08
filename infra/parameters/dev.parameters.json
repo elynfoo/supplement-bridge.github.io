@@ -6,10 +6,10 @@
       "value": "dev"
     },
     "location": {
-      "value": "australiaeast"
+      "value": "southeastasia"
     },
     "projectName": {
-      "value": "healthsupp"
+      "value": "supplement-bridge"
     },
     "sqlAdminLogin": {
       "value": "sqladmin"
@@ -17,13 +17,13 @@
     "sqlAdminPassword": {
       "reference": {
         "keyVault": {
-          "id": "/subscriptions/SUBSCRIPTION_ID/resourceGroups/healthsupp-dev-rg/providers/Microsoft.KeyVault/vaults/healthsuppdevkv"
+          "id": "/subscriptions/747b36e5-db47-4f4e-ab38-6be132019830/resourceGroups/supplement-bridge-dev_group/providers/Microsoft.KeyVault/vaults/supplement-bridge-dev-kv"
         },
         "secretName": "SqlAdminPassword"
       }
     },
     "alertEmail": {
-      "value": "devops@your-org.com"
+      "value": "elynf@genstudents.org"
     }
   }
 }
