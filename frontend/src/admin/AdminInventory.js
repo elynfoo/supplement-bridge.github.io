@@ -78,7 +78,7 @@ export default function AdminInventory({ token, onStatsChange }) {
     return { label: 'In Stock', cls: 'ok' };
   };
 
-  if (loading) return <div className="admin-loading">Loading inventoryâ€¦</div>;
+  if (loading) return <div className="admin-loading">Loading inventory...</div>;
 
   return (
     <div className="admin-section">
@@ -121,8 +121,8 @@ export default function AdminInventory({ token, onStatsChange }) {
                   </td>
                   <td>
                     <div className="stock-adj-btns">
-                      <button onClick={() => handleAdjust(product.id, -10)}>âˆ’10</button>
-                      <button onClick={() => handleAdjust(product.id, -1)}>âˆ’1</button>
+                      <button onClick={() => handleAdjust(product.id, -10)}>-10</button>
+                      <button onClick={() => handleAdjust(product.id, -1)}>-1</button>
                       <button onClick={() => handleAdjust(product.id, +1)}>+1</button>
                       <button onClick={() => handleAdjust(product.id, +10)}>+10</button>
                     </div>
@@ -134,7 +134,7 @@ export default function AdminInventory({ token, onStatsChange }) {
                         disabled={saving[product.id]}
                         onClick={() => handleSaveStock(product.id)}
                       >
-                        {saving[product.id] ? 'â€¦' : 'Save'}
+                        {saving[product.id] ? '...' : 'Save'}
                       </button>
                     )}
                   </td>

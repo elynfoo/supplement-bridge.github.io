@@ -126,7 +126,7 @@ export default function App() {
       setScreen('order-confirmation');
     } catch (err) {
       if (err.response?.status === 401) {
-        // Token expired â€” re-prompt login
+        // Token expired - re-prompt login
         setUser(null);
         localStorage.removeItem('hs_user');
         setPendingCheckout(true);
@@ -224,7 +224,7 @@ function Header({ screen, cartCount, user, goHome, onCartClick, onSignIn, onLogo
         ) : (
           <button className="header-signin" onClick={onSignIn}>Sign in</button>
         )}
-        <button className="header-cart" onClick={onCartClick}>ðŸ›’ {cartCount}</button>
+        <button className="header-cart" onClick={onCartClick}>Cart {cartCount}</button>
       </div>
     </header>
   );

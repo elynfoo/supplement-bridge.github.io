@@ -65,7 +65,7 @@ export default function AdminOrders({ token, onStatsChange }) {
     }
   };
 
-  if (loading) return <div className="admin-loading">Loading ordersâ€¦</div>;
+  if (loading) return <div className="admin-loading">Loading orders...</div>;
 
   return (
     <div className="admin-section">
@@ -136,7 +136,7 @@ export default function AdminOrders({ token, onStatsChange }) {
                             <strong>Items:</strong>
                             <ul>
                               {order.items.map(item => (
-                                <li key={item.id}>{item.name} Ã— {item.quantity} â€” ${(item.price * item.quantity).toFixed(2)}</li>
+                                <li key={item.id}>{item.name} x {item.quantity} - ${(item.price * item.quantity).toFixed(2)}</li>
                               ))}
                             </ul>
                           </div>

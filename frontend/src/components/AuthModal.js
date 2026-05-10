@@ -50,7 +50,7 @@ export default function AuthModal({ onSuccess, onClose, message }) {
   return (
     <div className="auth-overlay" onClick={(e) => e.target === e.currentTarget && onClose()}>
       <div className="auth-modal">
-        <button className="auth-close" onClick={onClose}>âœ•</button>
+        <button className="auth-close" onClick={onClose}>X</button>
 
         {message && <p className="auth-message">{message}</p>}
 
@@ -84,7 +84,7 @@ export default function AuthModal({ onSuccess, onClose, message }) {
               onChange={e => setLoginForm({ ...loginForm, password: e.target.value })}
             />
             <button type="submit" className="auth-submit" disabled={loading}>
-              {loading ? 'Signing inâ€¦' : 'Sign In'}
+              {loading ? 'Signing in...' : 'Sign In'}
             </button>
             <p className="auth-demo">
               Demo: <strong>demo@customer.com</strong> / <strong>Demo123!</strong>
@@ -120,7 +120,7 @@ export default function AuthModal({ onSuccess, onClose, message }) {
               onChange={e => setRegisterForm({ ...registerForm, confirmPassword: e.target.value })}
             />
             <button type="submit" className="auth-submit" disabled={loading}>
-              {loading ? 'Creating accountâ€¦' : 'Create Account'}
+              {loading ? 'Creating account...' : 'Create Account'}
             </button>
           </form>
         )}

@@ -47,7 +47,7 @@ export default function Browse({ products, onSelectProduct, onStartQuiz }) {
           className="search-input"
         />
         <button className="quiz-button" onClick={onStartQuiz}>
-          ðŸ’¡ Take Health Quiz
+           Take Health Quiz
         </button>
       </div>
 

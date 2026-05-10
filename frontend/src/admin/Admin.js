@@ -125,7 +125,7 @@ function AdminLogin({ onLogin }) {
             value={form.password} onChange={e => setForm({ ...form, password: e.target.value })}
           />
           <button type="submit" disabled={loading}>
-            {loading ? 'Signing inâ€¦' : 'Sign In'}
+            {loading ? 'Signing in...' : 'Sign In'}
           </button>
         </form>
         <p className="admin-login-hint">admin@healthsupp.com / Admin123!</p>

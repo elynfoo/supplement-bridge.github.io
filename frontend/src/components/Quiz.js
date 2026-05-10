@@ -91,7 +91,7 @@ export default function Quiz({ onSubmit, loading }) {
           onClick={handleNext}
           disabled={answers[currentQuestion] === undefined || loading}
         >
-          {isLastQuestion ? (loading ? 'Submitting...' : 'Get Recommendations') : 'Next â†’'}
+          {isLastQuestion ? (loading ? 'Submitting...' : 'Get Recommendations') : 'Next >'}
         </button>
       </div>
     </div>

@@ -91,7 +91,7 @@ export default function AdminProducts({ token, onStatsChange }) {
     }
   };
 
-  if (loading) return <div className="admin-loading">Loading productsâ€¦</div>;
+  if (loading) return <div className="admin-loading">Loading products...</div>;
 
   return (
     <div className="admin-section">
@@ -145,7 +145,7 @@ export default function AdminProducts({ token, onStatsChange }) {
             <div className="admin-form-actions">
               <button type="button" className="admin-btn-secondary" onClick={() => setShowForm(false)}>Cancel</button>
               <button type="submit" className="admin-btn-primary" disabled={saving}>
-                {saving ? 'Savingâ€¦' : editingProduct ? 'Save Changes' : 'Add Product'}
+                {saving ? 'Saving...' : editingProduct ? 'Save Changes' : 'Add Product'}
               </button>
             </div>
           </form>
