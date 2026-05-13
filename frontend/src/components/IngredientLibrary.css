@@ -1,0 +1,121 @@
+.lib-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.lib-header {
+  background: linear-gradient(135deg, #2196F3 0%, #1565C0 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.lib-header h2 { font-size: 1.8rem; margin-bottom: 0.4rem; }
+.lib-header p { opacity: 0.9; font-size: 1rem; }
+
+.lib-search {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+}
+.lib-search:focus {
+  outline: none;
+  border-color: #2196F3;
+  box-shadow: 0 0 0 3px rgba(33,150,243,0.12);
+}
+
+.lib-loading, .lib-empty {
+  text-align: center;
+  color: #888;
+  padding: 2rem;
+}
+
+.lib-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.lib-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.09);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.lib-card.open { box-shadow: 0 3px 12px rgba(0,0,0,0.14); }
+
+.lib-card-header {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+}
+.lib-card-header:hover { background: #fafafa; }
+
+.lib-card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.lib-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #222;
+}
+
+.lib-category-badge {
+  padding: 0.2rem 0.65rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.lib-chevron { font-size: 0.75rem; color: #999; flex-shrink: 0; }
+
+.lib-card-body {
+  padding: 0 1.25rem 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.lib-section h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #999;
+  margin-bottom: 0.4rem;
+}
+.lib-section p {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.lib-dosage {
+  background: #f1faf1;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+}
+.lib-dosage h4 { color: #4CAF50; }
+
+.lib-cautions {
+  background: #fff8e1;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+}
+.lib-cautions h4 { color: #F57F17; }
+
+@media (max-width: 600px) {
+  .lib-card-body { grid-template-columns: 1fr; }
+}

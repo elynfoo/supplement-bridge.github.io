@@ -18,36 +18,91 @@ let products = [
     id: 1, name: 'Vitamin D3 1000IU', category: 'vitamins', price: 12.99, stock: 142,
     image: 'https://via.placeholder.com/150?text=Vitamin+D3',
     description: 'Supports bone health and immune function',
-    ingredients: ['Cholecalciferol (Vitamin D3)', 'Olive Oil'],
-    tags: ['immunity', 'bones', 'elderly']
+    ingredients: ['Cholecalciferol (Vitamin D3)', 'Olive Oil', 'Softgel Capsule'],
+    tags: ['immunity', 'bones', 'elderly', 'vegan'],
+    certifications: ['GMP Certified', 'Non-GMO'],
+    rating: 4.6, reviewCount: 218
   },
   {
     id: 2, name: 'Omega-3 Fish Oil', category: 'supplements', price: 18.99, stock: 87,
     image: 'https://via.placeholder.com/150?text=Fish+Oil',
     description: 'Supports heart and brain health',
-    ingredients: ['Fish Oil (EPA/DHA)', 'Gelatin', 'Glycerin'],
-    tags: ['heart-health', 'brain', 'athletes']
+    ingredients: ['Fish Oil (EPA 180mg / DHA 120mg)', 'Gelatin', 'Glycerin', 'Vitamin E'],
+    tags: ['heart-health', 'brain', 'athletes'],
+    certifications: ['GMP Certified', 'NSF Certified'],
+    rating: 4.4, reviewCount: 163
   },
   {
     id: 3, name: 'Probiotics 50B CFU', category: 'supplements', price: 24.99, stock: 8,
     image: 'https://via.placeholder.com/150?text=Probiotics',
     description: 'Promotes digestive and gut health',
-    ingredients: ['Lactobacillus', 'Bifidobacterium', 'Prebiotic Fiber'],
-    tags: ['digestive', 'seniors', 'athletes']
+    ingredients: ['Lactobacillus acidophilus', 'Bifidobacterium longum', 'Bifidobacterium bifidum', 'Prebiotic FOS'],
+    tags: ['digestive', 'seniors', 'athletes', 'vegan'],
+    certifications: ['GMP Certified', 'Non-GMO'],
+    rating: 4.7, reviewCount: 291
   },
   {
     id: 4, name: 'Multivitamin Complete', category: 'vitamins', price: 15.99, stock: 203,
     image: 'https://via.placeholder.com/150?text=Multivitamin',
     description: 'Daily essential vitamins and minerals',
-    ingredients: ['Vitamin A', 'Vitamin C', 'Iron', 'Calcium', 'Zinc'],
-    tags: ['immunity', 'energy', 'general-wellness']
+    ingredients: ['Vitamin A 900mcg', 'Vitamin C 90mg', 'Vitamin D3 10mcg', 'Iron 8mg', 'Calcium 200mg', 'Zinc 11mg'],
+    tags: ['immunity', 'energy', 'general-wellness', 'vegan'],
+    certifications: ['GMP Certified', 'USP Verified'],
+    rating: 4.3, reviewCount: 445
   },
   {
     id: 5, name: 'Magnesium Glycinate', category: 'minerals', price: 16.99, stock: 0,
     image: 'https://via.placeholder.com/150?text=Magnesium',
     description: 'Supports muscle relaxation and sleep quality',
-    ingredients: ['Magnesium Glycinate', 'Cellulose'],
-    tags: ['sleep', 'stress', 'muscles']
+    ingredients: ['Magnesium Glycinate 400mg', 'Microcrystalline Cellulose', 'Vegetable Capsule'],
+    tags: ['sleep', 'stress', 'muscles', 'vegan'],
+    certifications: ['GMP Certified', 'Non-GMO'],
+    rating: 4.8, reviewCount: 372
+  },
+  {
+    id: 6, name: 'Vitamin C 1000mg', category: 'vitamins', price: 11.99, stock: 180,
+    image: 'https://via.placeholder.com/150?text=Vitamin+C',
+    description: 'High-potency antioxidant for immune defence and collagen production',
+    ingredients: ['Ascorbic Acid 1000mg', 'Rose Hip Extract 50mg', 'Microcrystalline Cellulose'],
+    tags: ['immunity', 'energy', 'general-wellness', 'vegan'],
+    certifications: ['GMP Certified', 'Non-GMO', 'Vegan'],
+    rating: 4.5, reviewCount: 312
+  },
+  {
+    id: 7, name: 'Zinc + Copper Complex', category: 'minerals', price: 9.99, stock: 95,
+    image: 'https://via.placeholder.com/150?text=Zinc+Copper',
+    description: 'Supports immune function, skin health, and hormone balance',
+    ingredients: ['Zinc Bisglycinate 15mg', 'Copper Gluconate 1mg', 'Vegetable Capsule'],
+    tags: ['immunity', 'skin', 'general-wellness', 'vegan'],
+    certifications: ['GMP Certified', 'Non-GMO'],
+    rating: 4.4, reviewCount: 147
+  },
+  {
+    id: 8, name: 'Ashwagandha 600mg (KSM-66)', category: 'herbs', price: 21.99, stock: 64,
+    image: 'https://via.placeholder.com/150?text=Ashwagandha',
+    description: 'Clinically studied adaptogen for stress relief, energy and focus',
+    ingredients: ['Ashwagandha Root Extract KSM-66 600mg (2.5% Withanolides)', 'Organic Brown Rice Flour', 'Vegetable Capsule'],
+    tags: ['stress', 'energy', 'sleep', 'vegan'],
+    certifications: ['GMP Certified', 'NSF Certified', 'Non-GMO', 'Organic'],
+    rating: 4.9, reviewCount: 508
+  },
+  {
+    id: 9, name: 'Collagen Peptides 10g', category: 'supplements', price: 29.99, stock: 51,
+    image: 'https://via.placeholder.com/150?text=Collagen',
+    description: 'Hydrolysed bovine collagen for skin elasticity and joint support',
+    ingredients: ['Hydrolysed Bovine Collagen Peptides 10g (Type I & III)', 'Vitamin C 50mg'],
+    tags: ['skin', 'joints', 'general-wellness'],
+    certifications: ['GMP Certified', 'NSF Certified'],
+    rating: 4.6, reviewCount: 229
+  },
+  {
+    id: 10, name: 'Vitamin B Complex', category: 'vitamins', price: 13.99, stock: 128,
+    image: 'https://via.placeholder.com/150?text=B+Complex',
+    description: 'Complete B vitamin blend for energy metabolism and nerve health',
+    ingredients: ['Vitamin B1 (Thiamine) 25mg', 'Vitamin B2 (Riboflavin) 25mg', 'Vitamin B3 (Niacin) 50mg', 'Vitamin B5 25mg', 'Vitamin B6 25mg', 'Vitamin B7 (Biotin) 300mcg', 'Vitamin B9 (Folate) 400mcg', 'Vitamin B12 (Methylcobalamin) 500mcg'],
+    tags: ['energy', 'brain', 'general-wellness', 'vegan'],
+    certifications: ['GMP Certified', 'Non-GMO', 'Vegan'],
+    rating: 4.5, reviewCount: 186
   }
 ];
 
@@ -108,6 +163,107 @@ const quizQuestions = [
       { text: 'Sometimes', value: 'moderate' },
       { text: 'Not really', value: 'sedentary' }
     ]
+  },
+  {
+    id: 4, question: 'What best describes your diet?',
+    options: [
+      { text: 'Vegan / Plant-based', value: 'vegan' },
+      { text: 'Vegetarian', value: 'vegetarian' },
+      { text: 'Omnivore (eat everything)', value: 'omnivore' },
+      { text: 'Keto / Low-carb', value: 'keto' }
+    ]
+  }
+];
+
+const tagReasons = {
+  immunity: 'supports your immune system',
+  energy: 'helps boost energy levels',
+  digestive: 'promotes gut and digestive health',
+  'heart-health': 'supports cardiovascular health',
+  brain: 'enhances cognitive function',
+  sleep: 'improves sleep quality',
+  stress: 'helps manage stress and cortisol',
+  muscles: 'supports muscle recovery',
+  bones: 'strengthens bone density',
+  skin: 'promotes skin health and elasticity',
+  joints: 'supports joint comfort and flexibility',
+  'general-wellness': 'supports overall daily wellness',
+  vegan: 'is suitable for your plant-based diet',
+  elderly: 'is recommended for your age group',
+  seniors: 'is well-suited for your age group',
+  athletes: 'is ideal for active individuals',
+};
+
+const ingredients = [
+  {
+    id: 1, name: 'Vitamin D3 (Cholecalciferol)', category: 'Vitamin',
+    what_it_is: 'A fat-soluble vitamin produced naturally by the skin when exposed to sunlight. Supplement form is derived from lanolin (sheep wool) or lichen (vegan).',
+    uses: 'Supports calcium absorption, bone density, immune function, and mood regulation. Widely recommended for people in low-sunlight regions.',
+    dosage: 'Typical daily dose: 1,000-2,000 IU for maintenance. Up to 4,000 IU considered safe for most adults. Best taken with a fat-containing meal.',
+    cautions: 'Excessive intake (above 10,000 IU/day long-term) can cause toxicity. Those with granulomatous disease or hypercalcaemia should consult a doctor first.'
+  },
+  {
+    id: 2, name: 'Omega-3 Fatty Acids (EPA / DHA)', category: 'Essential Fat',
+    what_it_is: 'Polyunsaturated fats found primarily in oily fish (salmon, mackerel, sardines) and algae. EPA and DHA are the active forms the body uses directly.',
+    uses: 'Supports heart health, reduces triglycerides, supports brain and eye function, and has anti-inflammatory properties.',
+    dosage: 'Typical dose: 1,000-3,000 mg combined EPA+DHA per day. Take with food to reduce fishy aftertaste.',
+    cautions: 'May thin blood at high doses - check with a doctor if taking blood thinners. Fish-based supplements are not suitable for vegans; look for algae-based alternatives.'
+  },
+  {
+    id: 3, name: 'Probiotics (Lactobacillus / Bifidobacterium)', category: 'Live Culture',
+    what_it_is: 'Beneficial live bacteria and yeasts that naturally inhabit the gut. Common strains include Lactobacillus acidophilus and Bifidobacterium longum.',
+    uses: 'Supports digestive health, helps restore gut flora after antibiotics, may reduce bloating, supports immune function and may improve mood via the gut-brain axis.',
+    dosage: 'Typical dose: 1-50 billion CFU per day depending on the condition. For general gut health, 5-10 billion CFU is adequate.',
+    cautions: 'Usually safe for healthy adults. People who are immunocompromised should consult a doctor before use. Some may experience temporary bloating when starting.'
+  },
+  {
+    id: 4, name: 'Vitamin C (Ascorbic Acid)', category: 'Vitamin',
+    what_it_is: 'A water-soluble antioxidant vitamin that the human body cannot produce on its own. Must be obtained through diet or supplementation.',
+    uses: 'Supports immune function, collagen synthesis, wound healing, iron absorption, and acts as a powerful antioxidant protecting cells from oxidative stress.',
+    dosage: 'Typical dose: 500-1,000 mg per day. Upper tolerable limit is 2,000 mg/day. Split doses are more effective at higher amounts.',
+    cautions: 'High doses (above 2,000 mg/day) may cause digestive upset or diarrhoea. Those with kidney stones (oxalate type) or kidney disease should limit intake.'
+  },
+  {
+    id: 5, name: 'Magnesium (Glycinate / Citrate)', category: 'Mineral',
+    what_it_is: 'An essential mineral involved in over 300 enzymatic reactions. Magnesium glycinate and citrate are highly bioavailable forms. Found in nuts, seeds, leafy greens and legumes.',
+    uses: 'Supports muscle relaxation, sleep quality, stress reduction, bone health, and blood sugar regulation. Commonly used for restless legs, muscle cramps and anxiety.',
+    dosage: 'Typical dose: 200-400 mg elemental magnesium per day. Take in the evening for best sleep benefit. Glycinate form is gentlest on the stomach.',
+    cautions: 'High doses (above 350 mg from supplements) may cause loose stools. People with kidney disease should consult a doctor as kidneys regulate magnesium excretion.'
+  },
+  {
+    id: 6, name: 'Zinc', category: 'Mineral',
+    what_it_is: 'An essential trace mineral found in meat, shellfish, legumes and seeds. The body does not store zinc so daily intake is important.',
+    uses: 'Supports immune function, wound healing, testosterone production, sense of taste and smell, and skin health. Commonly taken during cold and flu season.',
+    dosage: 'Typical dose: 8-15 mg per day (RDA). Therapeutic immune support: 15-30 mg. Best taken with food to reduce nausea.',
+    cautions: 'Long-term high doses (above 40 mg/day) can deplete copper levels. Zinc can interact with antibiotics - space doses at least 2 hours apart.'
+  },
+  {
+    id: 7, name: 'Ashwagandha (Withania somnifera)', category: 'Adaptogen Herb',
+    what_it_is: 'An ancient Ayurvedic herb classified as an adaptogen - it helps the body adapt to stress. KSM-66 and Sensoril are the most clinically studied root extracts.',
+    uses: 'Reduces cortisol levels, helps manage chronic stress and anxiety, supports energy, improves sleep quality, and may support thyroid and testosterone levels.',
+    dosage: 'Typical dose: 300-600 mg of root extract per day. Can be taken morning or evening. KSM-66 and Sensoril are standardised extracts with clinical backing.',
+    cautions: 'May interact with thyroid medications, immunosuppressants and sedatives. Avoid during pregnancy. Not suitable for autoimmune thyroid conditions without medical supervision.'
+  },
+  {
+    id: 8, name: 'Collagen Peptides', category: 'Protein',
+    what_it_is: 'Hydrolysed collagen from bovine (cow) or marine (fish) sources, broken down into small peptides for better absorption. Collagen is the most abundant structural protein in the body.',
+    uses: 'Supports skin elasticity and hydration, joint comfort and cartilage health, bone density, and muscle mass. Popular for anti-ageing and sports recovery.',
+    dosage: 'Typical dose: 5-15 g per day. Most studies show benefits at 10 g/day for skin and joints over 8-12 weeks. Dissolves easily in hot or cold liquids.',
+    cautions: 'Derived from animal sources - not suitable for vegans or vegetarians. Those with fish or bovine allergies should choose their source carefully. Not a complete protein.'
+  },
+  {
+    id: 9, name: 'Vitamin B Complex', category: 'Vitamin',
+    what_it_is: 'A group of 8 water-soluble vitamins: B1, B2, B3, B5, B6, B7 (Biotin), B9 (Folate), and B12. Taken together as they work synergistically.',
+    uses: 'Supports energy metabolism, nerve function, red blood cell production, mood, and cognitive health. Particularly important for vegans who may be deficient in B12.',
+    dosage: 'Doses vary by vitamin. Most B complex supplements provide 100% or more of the RDA for each B vitamin. Take with food to reduce nausea.',
+    cautions: 'High-dose B3 (niacin) can cause flushing. B6 above 100 mg/day long-term can cause nerve damage. Ensure folate is in methylfolate form for those with MTHFR gene variants.'
+  },
+  {
+    id: 10, name: 'Iron (Ferrous Bisglycinate)', category: 'Mineral',
+    what_it_is: 'An essential mineral critical for haemoglobin production and oxygen transport. Ferrous bisglycinate is a chelated form with better absorption and fewer side effects than ferrous sulphate.',
+    uses: 'Treats and prevents iron deficiency anaemia. Supports energy levels, concentration, and immune function. Particularly important for women, pregnant individuals, and athletes.',
+    dosage: 'Therapeutic dose for deficiency: 100-200 mg elemental iron per day (split). Take with vitamin C for best absorption. Do not take with calcium, tea, or coffee.',
+    cautions: 'Do not supplement without confirmed deficiency (blood test) as excess iron is harmful. Can cause constipation, nausea, and dark stools. Keep away from children - iron overdose is dangerous.'
   }
 ];
 
@@ -208,12 +364,31 @@ app.post('/api/quiz/submit', (req, res) => {
   const tags = Object.values(answers).filter(Boolean);
   const recommendations = products
     .filter(p => p.tags.some(tag => tags.includes(tag)))
-    .map(({ stock, ...p }) => p)
+    .map(({ stock, ...p }) => {
+      const matchedTags = p.tags.filter(tag => tags.includes(tag));
+      const reasonParts = matchedTags.map(tag => tagReasons[tag]).filter(Boolean).slice(0, 2);
+      const reason = reasonParts.length > 0
+        ? `Recommended because it ${reasonParts.join(' and ')}.`
+        : 'A great supplement for your overall wellness.';
+      return { ...p, reason };
+    })
     .slice(0, 5);
   res.json({
     recommendations,
     personalizedMessage: `Based on your profile, we recommend these supplements for ${answers[0] || 'general wellness'}.`
   });
+});
+
+app.get('/api/ingredients', (req, res) => {
+  const query = (req.query.q || '').toLowerCase();
+  const results = query
+    ? ingredients.filter(i =>
+        i.name.toLowerCase().includes(query) ||
+        i.category.toLowerCase().includes(query) ||
+        i.uses.toLowerCase().includes(query)
+      )
+    : ingredients;
+  res.json(results);
 });
 
 // ==================== CHECKOUT ====================

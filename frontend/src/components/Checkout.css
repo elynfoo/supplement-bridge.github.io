@@ -76,6 +76,66 @@ form input:disabled {
   margin-bottom: 1rem;
 }
 
+.payment-method-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.payment-tab {
+  flex: 1;
+  padding: 0.6rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #555;
+}
+.payment-tab.active {
+  border-color: #4CAF50;
+  background: #f1faf1;
+  color: #2E7D32;
+  font-weight: 600;
+}
+
+.paynow-section { margin-top: 0.5rem; }
+.paynow-qr {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.paynow-qr-mock {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+.qr-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 18px);
+  gap: 2px;
+  margin-bottom: 0.5rem;
+}
+.qr-cell {
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  background: #eee;
+}
+.qr-cell.filled { background: #1a1a2e; }
+.qr-label { font-size: 0.75rem; color: #666; }
+
+.paynow-details { font-size: 0.9rem; line-height: 1.9; }
+.paynow-details p { margin: 0; }
+.paynow-note {
+  margin-top: 0.75rem !important;
+  font-size: 0.82rem;
+  color: #4CAF50;
+  font-style: italic;
+}
+
 .form-actions {
   display: flex;
   gap: 1rem;

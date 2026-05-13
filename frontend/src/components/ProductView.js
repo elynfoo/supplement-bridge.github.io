@@ -1,6 +1,19 @@
 import React, { useState } from 'react';
 import './ProductView.css';
 
+function StarRating({ rating, reviewCount }) {
+  return (
+    <div className="pv-rating">
+      <span className="pv-stars">
+        {[1,2,3,4,5].map(i => (
+          <span key={i} className={i <= Math.round(rating) ? 'star filled' : 'star'}>★</span>
+        ))}
+      </span>
+      <span className="pv-rating-text">{rating.toFixed(1)} ({reviewCount} reviews)</span>
+    </div>
+  );
+}
+
 export default function ProductView({ product, onAddToCart, onBack }) {
   const [quantity, setQuantity] = useState(1);
 
@@ -21,6 +34,16 @@ export default function ProductView({ product, onAddToCart, onBack }) {
         <div className="product-details-section">
           <h1>{product.name}</h1>
           <p className="category">{product.category}</p>
+
+          {product.rating && <StarRating rating={product.rating} reviewCount={product.reviewCount} />}
+
+          {product.certifications && product.certifications.length > 0 && (
+            <div className="pv-certifications">
+              {product.certifications.map(c => (
+                <span key={c} className="pv-cert-badge">{c}</span>
+              ))}
+            </div>
+          )}
 
           <div className="price-section">
             <p className="price">${product.price.toFixed(2)}</p>
@@ -55,7 +78,7 @@ export default function ProductView({ product, onAddToCart, onBack }) {
               </div>
             </div>
             <button className="add-to-cart-button" onClick={handleAddToCart}>
-              🛒 Add to Cart (${(product.price * quantity).toFixed(2)})
+              Add to Cart (${(product.price * quantity).toFixed(2)})
             </button>
           </div>
         </div>

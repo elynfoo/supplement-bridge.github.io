@@ -8,6 +8,8 @@ import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import OrderConfirmation from './components/OrderConfirmation';
 import AuthModal from './components/AuthModal';
+import Compare from './components/Compare';
+import IngredientLibrary from './components/IngredientLibrary';
 import './App.css';
 
 const API_URL = process.env.REACT_APP_API_URL || '';
@@ -36,6 +38,7 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [showAuth, setShowAuth] = useState(false);
   const [pendingCheckout, setPendingCheckout] = useState(false);
+  const [compareList, setCompareList] = useState([]);
 
   const [user, setUser] = useState(() => {
     try { return JSON.parse(localStorage.getItem('hs_user')); } catch { return null; }
@@ -139,6 +142,15 @@ export default function App() {
     }
   };
 
+  const handleToggleCompare = (product) => {
+    setCompareList(prev => {
+      const exists = prev.find(p => p.id === product.id);
+      if (exists) return prev.filter(p => p.id !== product.id);
+      if (prev.length >= 3) return prev;
+      return [...prev, product];
+    });
+  };
+
   const goHome = () => { setScreen('browse'); setSelectedProduct(null); };
 
   if (loading && screen === 'browse' && products.length === 0) {
@@ -157,9 +169,25 @@ export default function App() {
         {screen === 'browse' && (
           <Browse
             products={products}
-            onSelectProduct={(p) => { setSelectedProduct(p); setScreen('product-view'); }}
+            onSelectProduct={(p, mode) => {
+              if (mode === 'compare') { setScreen('compare'); }
+              else { setSelectedProduct(p); setScreen('product-view'); }
+            }}
             onStartQuiz={() => setScreen('quiz')}
+            onOpenLibrary={() => setScreen('library')}
+            compareList={compareList}
+            onToggleCompare={handleToggleCompare}
           />
+        )}
+        {screen === 'compare' && (
+          <Compare
+            products={compareList}
+            onAddToCart={handleAddToCart}
+            onBack={() => setScreen('browse')}
+          />
+        )}
+        {screen === 'library' && (
+          <IngredientLibrary onBack={() => setScreen('browse')} />
         )}
         {screen === 'quiz' && <Quiz onSubmit={handleSubmitQuiz} loading={loading} />}
         {screen === 'recommendations' && (

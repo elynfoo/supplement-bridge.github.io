@@ -53,10 +53,19 @@
   cursor: pointer;
   white-space: nowrap;
 }
+.quiz-button:hover { background: #F57C00; }
 
-.quiz-button:hover {
-  background: #F57C00;
+.library-button {
+  padding: 0.75rem 1.5rem;
+  background: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  white-space: nowrap;
 }
+.library-button:hover { background: #1976D2; }
 
 .products-grid {
   display: grid;
@@ -68,16 +77,20 @@
   background: white;
   border-radius: 8px;
   overflow: hidden;
-  cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, box-shadow 0.2s;
   display: flex;
   flex-direction: column;
 }
-
 .product-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.product-card-body { cursor: pointer; flex: 1; }
+.product-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 1rem 1rem;
 }
 
 .product-image {
@@ -123,19 +136,76 @@
 }
 
 .view-button {
-  margin: 0 1rem 1rem;
-  padding: 0.75rem;
+  flex: 1;
+  padding: 0.6rem;
   background: #4CAF50;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
+}
+.view-button:hover { background: #45a049; }
+
+.compare-toggle {
+  flex: 1;
+  padding: 0.6rem;
+  background: white;
+  color: #2196F3;
+  border: 1.5px solid #2196F3;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.88rem;
+}
+.compare-toggle:hover { background: #e3f2fd; }
+.compare-toggle.in-compare { background: #2196F3; color: white; }
+.compare-toggle:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.browse-stars { display: block; padding: 0 1rem 0.25rem; }
+.browse-stars .star { color: #ddd; font-size: 0.95rem; }
+.browse-stars .star.filled { color: #FF9800; }
+.browse-rating-value { font-size: 0.8rem; color: #666; margin-left: 3px; }
+
+.product-certs {
+  padding: 0.25rem 1rem;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.cert-badge {
+  background: #e8f4fd;
+  color: #1565C0;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
 }
 
-.view-button:hover {
-  background: #45a049;
+.compare-bar {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a1a2e;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  z-index: 100;
 }
+.compare-bar-btn {
+  padding: 0.5rem 1.2rem;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.compare-bar-btn:hover { background: #45a049; }
 
 @media (max-width: 768px) {
   .hero-section h2 {

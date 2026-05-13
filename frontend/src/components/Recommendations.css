@@ -53,6 +53,25 @@
   color: #333;
 }
 
+.rec-stars {
+  padding: 0 1rem 0.25rem;
+  display: block;
+}
+.rec-stars .star { color: #ddd; font-size: 1rem; }
+.rec-stars .star.filled { color: #FF9800; }
+.rec-rating-value { font-size: 0.85rem; color: #666; margin-left: 4px; }
+
+.rec-reason {
+  padding: 0.4rem 1rem;
+  font-size: 0.82rem;
+  color: #4CAF50;
+  font-style: italic;
+  border-left: 3px solid #4CAF50;
+  margin: 0 1rem 0.5rem;
+  background: #f9fef9;
+  border-radius: 0 4px 4px 0;
+}
+
 .rec-description {
   padding: 0 1rem 0.5rem;
   font-size: 0.9rem;

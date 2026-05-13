@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Checkout.css';
 
 export default function Checkout({ cartItems, user, onSubmit, loading, onCancel }) {
+  const [paymentMethod, setPaymentMethod] = useState('card');
   const [formData, setFormData] = useState({
     firstName: user?.firstName || '',
     lastName: user?.lastName || '',
@@ -98,34 +99,57 @@ export default function Checkout({ cartItems, user, onSubmit, loading, onCancel 
             </fieldset>
 
             <fieldset>
-              <legend>Payment Information (Demo - Mocked)</legend>
-              <p className="demo-notice">ℹ️ Demo mode - card is pre-filled with test credentials</p>
-              <input
-                type="text"
-                name="cardNumber"
-                placeholder="Card Number"
-                value={formData.cardNumber}
-                onChange={handleChange}
-                disabled
-              />
-              <div className="form-row">
-                <input
-                  type="text"
-                  name="expiryDate"
-                  placeholder="MM/YY"
-                  value={formData.expiryDate}
-                  onChange={handleChange}
-                  disabled
-                />
-                <input
-                  type="text"
-                  name="cvv"
-                  placeholder="CVV"
-                  value={formData.cvv}
-                  onChange={handleChange}
-                  disabled
-                />
+              <legend>Payment Method (Demo)</legend>
+              <div className="payment-method-tabs">
+                <button
+                  type="button"
+                  className={`payment-tab ${paymentMethod === 'card' ? 'active' : ''}`}
+                  onClick={() => setPaymentMethod('card')}
+                >
+                  Credit / Debit Card
+                </button>
+                <button
+                  type="button"
+                  className={`payment-tab ${paymentMethod === 'paynow' ? 'active' : ''}`}
+                  onClick={() => setPaymentMethod('paynow')}
+                >
+                  PayNow
+                </button>
               </div>
+
+              {paymentMethod === 'card' && (
+                <div className="payment-card-fields">
+                  <p className="demo-notice">Demo mode — card pre-filled with test credentials</p>
+                  <input type="text" name="cardNumber" placeholder="Card Number" value={formData.cardNumber} disabled />
+                  <div className="form-row">
+                    <input type="text" name="expiryDate" placeholder="MM/YY" value={formData.expiryDate} disabled />
+                    <input type="text" name="cvv" placeholder="CVV" value={formData.cvv} disabled />
+                  </div>
+                </div>
+              )}
+
+              {paymentMethod === 'paynow' && (
+                <div className="paynow-section">
+                  <p className="demo-notice">Demo mode — PayNow payment is simulated</p>
+                  <div className="paynow-qr">
+                    <div className="paynow-qr-mock">
+                      <div className="qr-grid">
+                        {Array.from({length: 49}).map((_, i) => (
+                          <div key={i} className={`qr-cell ${Math.random() > 0.5 ? 'filled' : ''}`} />
+                        ))}
+                      </div>
+                      <p className="qr-label">Scan with your banking app</p>
+                    </div>
+                    <div className="paynow-details">
+                      <p><strong>UEN:</strong> 202512345A</p>
+                      <p><strong>Name:</strong> HealthSupp Pte Ltd</p>
+                      <p><strong>Amount:</strong> ${cartItems.reduce((s, i) => s + i.price * i.quantity, 0).toFixed(2)}</p>
+                      <p><strong>Reference:</strong> HS-{Date.now().toString().slice(-6)}</p>
+                      <p className="paynow-note">Payment will be confirmed automatically in demo mode.</p>
+                    </div>
+                  </div>
+                </div>
+              )}
             </fieldset>
 
             <div className="form-actions">

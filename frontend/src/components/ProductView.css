@@ -44,8 +44,34 @@
 .category {
   color: #999;
   font-size: 0.95rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-transform: capitalize;
+}
+
+.pv-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.pv-stars .star { color: #ddd; font-size: 1.2rem; }
+.pv-stars .star.filled { color: #FF9800; }
+.pv-rating-text { font-size: 0.9rem; color: #666; }
+
+.pv-certifications {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.pv-cert-badge {
+  background: #e8f4fd;
+  color: #1565C0;
+  border: 1px solid #bbdefb;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
 }
 
 .price-section {
