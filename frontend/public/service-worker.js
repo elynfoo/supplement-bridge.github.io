@@ -1,12 +1,11 @@
 /* Service Worker for PWA offline support */
 
-const CACHE_NAME = 'healthsupp-v1';
+const CACHE_NAME = 'healthsupp-v2';
 const urlsToCache = [
   '/',
   '/index.html',
   '/manifest.json',
-  '/icon-192x192.png',
-  '/icon-512x512.png'
+  '/icon.svg'
 ];
 
 self.addEventListener('install', event => {

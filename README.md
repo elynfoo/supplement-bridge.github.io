@@ -4,10 +4,10 @@ A cloud-based e-commerce platform connecting customers with trusted supplement p
 
 ## Live URLs
 
-| Environment | URL |
-|---|---|
-| Production | https://supplement-bridge-a8anhmbfcydufcat.southeastasia-01.azurewebsites.net|  https://supplement-bridge-a8anhmbfcydufcat.southeastasia-01.azurewebsites.net/admin
-| Dev | https://supplement-bridge-dev.azurewebsites.net | https://supplement-bridge-dev.azurewebsites.net/admin
+| Environment | Store | Admin |
+| --- | --- | --- |
+| Production | [supplement-bridge-a8anhmbfcydufcat.southeastasia-01.azurewebsites.net](https://supplement-bridge-a8anhmbfcydufcat.southeastasia-01.azurewebsites.net) | [/admin](https://supplement-bridge-a8anhmbfcydufcat.southeastasia-01.azurewebsites.net/admin) |
+| Dev | [supplement-bridge-dev-hzdhdqg2dpgfcnfn.southeastasia-01.azurewebsites.net](https://supplement-bridge-dev-hzdhdqg2dpgfcnfn.southeastasia-01.azurewebsites.net) | [/admin](https://supplement-bridge-dev-hzdhdqg2dpgfcnfn.southeastasia-01.azurewebsites.net/admin) |
 
 ## Architecture
 
