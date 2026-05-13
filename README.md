@@ -91,24 +91,49 @@ App runs on `http://localhost:3000`
 
 | Endpoint | Method | Purpose |
 |---|---|---|
-| `/api/products` | GET | Get all products |
+| `/api/products` | GET | Get all products (10 items with certifications, ratings) |
 | `/api/products/:id` | GET | Get product by ID |
 | `/api/search?q=query` | GET | Search products |
-| `/api/quiz` | GET | Get health quiz questions |
-| `/api/quiz/submit` | POST | Submit quiz and get recommendations |
+| `/api/quiz` | GET | Get health quiz questions (4 questions) |
+| `/api/quiz/submit` | POST | Submit quiz and get recommendations with reasons |
+| `/api/ingredients` | GET | Get ingredient education library (supports `?q=` search) |
 | `/api/checkout` | POST | Process checkout |
 | `/api/auth/login` | POST | User login |
+| `/api/auth/register` | POST | User registration |
+| `/api/orders/my` | GET | Get current user's orders |
 | `/api/admin/stats` | GET | Admin dashboard stats |
+| `/api/admin/products` | GET / POST | List or add products |
+| `/api/admin/orders` | GET | List all orders |
 | `/api/health` | GET | Health check |
 
 ## Features
 
-- Browse & search supplements
-- 3-question personalized health quiz
-- Product recommendations based on quiz answers
-- Shopping cart and checkout
-- Admin dashboard (products, orders, inventory)
+**F1 — E-Commerce Storefront**
+- Browse and search 10 curated supplement products
+- Product detail view with star ratings, certifications (NSF/GMP), and ingredients
+- Shopping cart and checkout with **card** or **PayNow** (mock)
+- Order confirmation and order history
+- Real-time admin dashboard (orders, products, inventory)
+
+**F2 — Personalised Recommendation Engine**
+- 4-question health quiz (health concern, age group, activity level, diet preference)
+- Recommendations matched to quiz answers with a personalised reason per product
+- No account required to take the quiz
+
+**F3 — Product Comparison Tool**
+- Add up to 3 products to compare from the browse page
+- Side-by-side table: price, star rating, certifications, ingredients, best-for tags
+- Floating compare bar — click "Compare Now" to open the comparison view
+
+**F4 — Ingredient Education Library**
+- Searchable library of 10 common supplement ingredients
+- Each entry covers: what it is, common uses, dosage guidance, things to be aware of
+- Written in plain, jargon-free language for everyday consumers
+- Backed by `/api/ingredients` with full-text search support
+
+**Platform**
 - PWA — installable on mobile and desktop
+- JWT authentication with admin roles
 
 ## Infrastructure as Code
 

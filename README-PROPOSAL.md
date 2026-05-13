@@ -17,21 +17,34 @@ The application is built on a React frontend served by a Node.js/Express backend
 
 ---
 
+## 1.1 Platform Features (Implemented)
+
+| Feature | Description | Status |
+| --- | --- | --- |
+| **F1 — E-Commerce Storefront** | 10 curated products with certifications (NSF/GMP), star ratings, and ingredient lists. Card and PayNow (mock) checkout. Real-time admin inventory dashboard. | Done |
+| **F2 — Personalised Recommendation Engine** | 4-question quiz (health concern, age group, activity, diet). Each recommendation shows a tailored reason. No account required. | Done |
+| **F3 — Product Comparison Tool** | Select up to 3 products; side-by-side table with price, rating, certifications, ingredients, and tags. Floating compare bar on browse page. | Done |
+| **F4 — Ingredient Education Library** | Searchable library of 10 ingredients. Each entry covers what it is, common uses, dosage guidance, and cautions — written in plain language. | Done |
+
+---
+
 ## 2. Purpose / Goals
 
 **Primary Purpose**
-Provide a modern, accessible digital storefront for healthcare supplement retail, with a focus on personalised product discovery and mobile usability.
+Provide a modern, accessible digital storefront for healthcare supplement retail, with a focus on personalised product discovery, ingredient transparency, and mobile usability.
 
 **Goals**
 
-| # | Goal | Measure of Success |
-| --- | --- | --- |
-| 1 | Launch a functional e-commerce storefront | Users can browse, search, and purchase products end-to-end |
-| 2 | Personalise product recommendations | Health quiz drives relevant product suggestions |
-| 3 | Enable mobile-first access via PWA | App is installable on iOS and Android without an app store |
-| 4 | Automate deployment pipeline | Push to `main` deploys to Dev then Prod with no manual steps |
-| 5 | Establish scalable cloud infrastructure | Bicep IaC supports `dev`, `staging`, `uat`, `prod` from one command |
-| 6 | Provide admin visibility and control | Admin dashboard covers orders, products, and inventory |
+| # | Goal | Measure of Success | Status |
+| --- | --- | --- | --- |
+| 1 | Launch a functional e-commerce storefront | Users can browse, search, and purchase products end-to-end | Done |
+| 2 | Personalise product recommendations | 4-question quiz drives relevant suggestions with reasons | Done |
+| 3 | Enable product comparison | Side-by-side comparison of up to 3 products with certifications and ratings | Done |
+| 4 | Provide ingredient education | Searchable library of 10 ingredients with plain-language guidance | Done |
+| 5 | Enable mobile-first access via PWA | App is installable on iOS and Android without an app store | Done |
+| 6 | Automate deployment pipeline | Push to `main` deploys to Dev then Prod with no manual steps | Done |
+| 7 | Establish scalable cloud infrastructure | Bicep IaC supports `dev`, `staging`, `uat`, `prod` from one command | Done |
+| 8 | Provide admin visibility and control | Admin dashboard covers orders, products, and inventory | Done |
 
 ---
 
@@ -161,16 +174,19 @@ The app is installable as a PWA on supported browsers. iOS requires Safari; the 
 | | React frontend scaffold + Express backend running | Complete | Done |
 | | JWT authentication (login, register, admin roles) | Complete | Done |
 | | Product browse, search, and product detail view | Complete | Done |
-| **Phase 2 — Commerce** | Health quiz + personalised recommendations | Complete | Done |
-| | Shopping cart and checkout flow | Complete | Done |
+| **Phase 2 — Commerce** | 10-product catalogue with certifications, ratings | Complete | Done |
+| | 4-question health quiz + personalised recommendations with reasons | Complete | Done |
+| | Shopping cart and checkout (card + PayNow mock) | Complete | Done |
 | | Order confirmation and order history | Complete | Done |
 | | Admin dashboard (orders, products, inventory) | Complete | Done |
-| **Phase 3 — Platform** | PWA manifest, service worker, installability | Complete | Done |
+| **Phase 3 — Discovery** | Product comparison tool (F3) | Complete | Done |
+| | Ingredient education library with search (F4) | Complete | Done |
+| | PWA manifest, service worker, installability | Complete | Done |
 | | Bicep IaC for multi-environment provisioning | Complete | Done |
 | | UAT environment deployment | In progress | — |
 | **Phase 4 — Production Hardening** | Migrate from mock data to Azure SQL Database | Planned | — |
 | | Azure Key Vault for secrets management | Planned | — |
-| | Payment gateway integration (Stripe) | Planned | — |
+| | Payment gateway integration (Stripe + PayNow live) | Planned | — |
 | | Azure Front Door + WAF | Planned | — |
 | | Microsoft Entra ID (enterprise auth) | Planned | — |
 | | Staging environment and deployment slots | Planned | — |
